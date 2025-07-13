@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aryora - Premium Silver Jewellery</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Montserrat:wght@300;400;500;600&display=swap');
+        
+        :root {
+            --primary-green: #1e3f20;
+            --secondary-green: #2c5e30;
+            --cream: #f9f6f0;
+            --dark-cream: #e8e4dc;
+            --gold: #c8a57e;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--cream);
+            color: #333;
+        }
+        
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .nav-link:hover {
+            color: var(--secondary-green);
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-green);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--secondary-green);
+        }
+        
+        .testimonial-card {
+            border-left: 3px solid var(--primary-green);
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .instagram-feed img {
+            transition: transform 0.3s ease;
+        }
+        
+        .instagram-feed img:hover {
+            transform: scale(1.05);
+        }
+        
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25D366;
+            color: white;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-content {
+                padding-top: 100px;
+            }
+            
+            .whatsapp-btn {
+                width: 50px;
+                height: 50px;
+                font-size: 25px;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="#" class="text-xl font-bold text-gray-900">ARYORA</a>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#" class="nav-link text-gray-600 hover:text-gray-900">Home</a>
+                    <a href="#" class="nav-link text-gray-600 hover:text-gray-900">Shop All</a>
+                    <a href="#" class="nav-link text-gray-600 hover:text-gray-900">Collections</a>
+                    <a href="#" class="nav-link text-gray-600 hover:text-gray-900">Try At Home</a>
+                    <a href="#" class="nav-link text-gray-600 hover:text-gray-900">Size Guide</a>
+                    <a href="#" class="nav-link text-gray-600 hover:text-gray-900">About Us</a>
+                    <a href="#" class="nav-link text-gray-600 hover:text-gray-900">Contact</a>
+                    <a href="#" class="nav-link text-gray-600 hover:text-gray-900">Career</a>
+                </div>
+                
+                <div class="flex items-center space-x-4">
+                    <button class="text-gray-600 hover:text-gray-900">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <button class="text-gray-600 hover:text-gray-900">
+                        <i class="fas fa-user"></i>
+                    </button>
+                    <button class="text-gray-600 hover:text-gray-900 relative">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="absolute -top-2 -right-2 bg-green-600 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">0</span>
+                    </button>
+                    <button class="text-gray-600 hover:text-gray-900 md:hidden">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center bg-cover bg-center" style="background-image: linear-gradient(rgba(249, 246, 240, 0.9), rgba(249, 246, 240, 0.9))">
+        <div class="hero-content text-center px-4 mx-auto max-w-4xl">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 text-gray-900">Light. Legacy. Aryora.</h1>
+            <p class="text-xl mb-8 text-gray-700 max-w-2xl mx-auto">Discover timeless silver jewellery crafted for generations. Each piece tells a story of heritage and modern elegance.</p>
+            <a href="#" class="inline-block bg-green-800 text-white px-8 py-3 rounded-none font-medium hover:bg-green-700 transition duration-300">SHOP NOW</a>
+        </div>
+    </section>
+
+    <!-- Featured Collections -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold mb-4">Our Collections</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">Explore our curated collections, each designed with a unique story and craftsmanship.</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Collection 1 -->
+            <div class="relative group">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/351fdfc9-5abf-432a-a5ee-66aa6d084bd5.png" alt="Elegant silver necklace collection displayed on velvet stand with emerald accents" class="w-full h-auto object-cover">
+                <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition duration-300 flex items-end p-6">
+                    <div>
+                        <h3 class="text-white text-2xl font-bold mb-2">Heritage Collection</h3>
+                        <a href="#" class="text-white border-b border-white pb-1">Shop Now →</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Collection 2 -->
+            <div class="relative group">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/41d0e898-34b5-44e5-9db9-8a98346f4bf8.png" alt="Modern silver rings with geometric designs arranged in circular pattern" class="w-full h-auto object-cover">
+                <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition duration-300 flex items-end p-6">
+                    <div>
+                        <h3 class="text-white text-2xl font-bold mb-2">Modern Elegance</h3>
+                        <a href="#" class="text-white border-b border-white pb-1">Shop Now →</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Collection 3 -->
+            <div class="relative group">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/d8aded05-a62d-4bff-a9c3-c17d61411265.png" alt="Bridal jewellery showcase featuring silver and diamond pieces on silk fabric" class="w-full h-auto object-cover">
+                <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition duration-300 flex items-end p-6">
+                    <div>
+                        <h3 class="text-white text-2xl font-bold mb-2">Bridal Bliss</h3>
+                        <a href="#" class="text-white border-b border-white pb-1">Shop Now →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bestsellers -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-white max-w-7xl mx-auto">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold mb-4">Our Bestsellers</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">Customer favorites that define the Aryora legacy.</p>
+        </div>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            <!-- Product 1 -->
+            <div class="product-card transition duration-300">
+                <div class="relative mb-4">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/161c1983-3a58-4a89-ad12-c5e649d1ee59.png" alt="Delicate silver pendant necklace with emerald stone centerpiece" class="w-full h-auto">
+                    <button class="absolute top-4 right-4 text-gray-400 hover:text-red-500">
+                        <i class="far fa-heart"></i>
+                    </button>
+                </div>
+                <h3 class="text-lg font-semibold mb-1">Emerald Harmony Pendant</h3>
+                <p class="text-gray-600 mb-2">₹12,500</p>
+                <button class="w-full bg-green-800 text-white py-2 hover:bg-green-700 transition duration-300">Add to Cart</button>
+            </div>
+            
+            <!-- Product 2 -->
+            <div class="product-card transition duration-300">
+                <div class="relative mb-4">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/6134b16d-f912-4b1b-a589-1f4d48205d95.png" alt="Chunky silver bracelet with intricate floral engravings" class="w-full h-auto">
+                    <button class="absolute top-4 right-4 text-gray-400 hover:text-red-500">
+                        <i class="far fa-heart"></i>
+                    </button>
+                </div>
+                <h3 class="text-lg font-semibold mb-1">Flourish Statement Bracelet</h3>
+                <p class="text-gray-600 mb-2">₹8,900</p>
+                <button class="w-full bg-green-800 text-white py-2 hover:bg-green-700 transition duration-300">Add to Cart</button>
+            </div>
+            
+            <!-- Product 3 -->
+            <div class="product-card transition duration-300">
+                <div class="relative mb-4">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/3b608118-e449-41b2-9421-02748c42c9f3.png" alt="Minimalist silver hoop earrings with diamond accents" class="w-full h-auto">
+                    <button class="absolute top-4 right-4 text-gray-400 hover:text-red-500">
+                        <i class="far fa-heart"></i>
+                    </button>
+                </div>
+                <h3 class="text-lg font-semibold mb-1">Timeless Hoop Earrings</h3>
+                <p class="text-gray-600 mb-2">₹6,700</p>
+                <button class="w-full bg-green-800 text-white py-2 hover:bg-green-700 transition duration-300">Add to Cart</button>
+            </div>
+            
+            <!-- Product 4 -->
+            <div class="product-card transition duration-300">
+                <div class="relative mb-4">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/d1f232cf-d0b7-499f-a801-0c9999a34d95.png" alt="Stackable silver rings set with varying widths and textures" class="w-full h-auto">
+                    <button class="absolute top-4 right-4 text-gray-400 hover:text-red-500">
+                        <i class="far fa-heart"></i>
+                    </button>
+                </div>
+                <h3 class="text-lg font-semibold mb-1">Artisan Ring Trio</h3>
+                <p class="text-gray-600 mb-2">₹14,200</p>
+                <button class="w-full bg-green-800 text-white py-2 hover:bg-green-700 transition duration-300">Add to Cart</button>
+            </div>
+        </div>
+        
+        <div class="text-center mt-12">
+            <a href="#" class="inline-block border-2 border-green-800 text-green-800 px-8 py-2 rounded-none font-medium hover:bg-green-800 hover:text-white transition duration-300">VIEW ALL PRODUCTS</a>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">What Our Clients Say</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Words that inspire us to create more beautiful pieces.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-8 testimonial-card">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-6">"The Heritage Collection necklace is even more beautiful in person. The craftsmanship is exceptional and it's become my signature piece."</p>
+                    <div class="flex items-center">
+                        <div class="mr-4">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/56856484-3c35-45cf-b925-9bdfa8f8b0eb.png" alt="Portrait of Priya M., a satisfied customer smiling wearing Aryora jewellery" class="rounded-full w-12 h-12 object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Priya M.</h4>
+                            <p class="text-gray-600 text-sm">Delhi</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-8 testimonial-card">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-6">"I appreciated the 'Try at Home' service before my wedding. Being able to see how the jewellery would look with my outfit was invaluable."</p>
+                    <div class="flex items-center">
+                        <div class="mr-4">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/74fc4857-8237-4456-bdf3-ef954fb3a8e3.png" alt="Portrait of Rahul & Sanya, a happy couple showcasing their Aryora wedding jewellery" class="rounded-full w-12 h-12 object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Rahul & Sanya</h4>
+                            <p class="text-gray-600 text-sm">Mumbai</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-8 testimonial-card">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-6">"The virtual styling session was a game-changer. The stylist helped me choose pieces that perfectly complemented my personal style."</p>
+                    <div class="flex items-center">
+                        <div class="mr-4">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/853fa70d-837b-4bac-9883-5264ed1259ca.png" alt="Portrait of Anita K., a professional woman wearing elegant Aryora pieces" class="rounded-full w-12 h-12 object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Anita K.</h4>
+                            <p class="text-gray-600 text-sm">Bangalore</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instagram Feed -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold mb-4">#AryoraMoments</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">Follow us on Instagram for styling inspiration and new collection previews.</p>
+        </div>
+        
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+            <div class="instagram-feed">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/a2b3476c-c3b7-4d28-939c-475e4cced0a8.png" alt="Woman wearing Aryora jewellery at a beach wedding at sunset" class="w-full h-auto">
+            </div>
+            <div class="instagram-feed">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/400eec3e-a0a3-4584-88f8-ff2df6ebe463.png" alt="Close-up of Aryora silver bangles with green silk scarf" class="w-full h-auto">
+            </div>
+            <div class="instagram-feed">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/c50da86c-1099-40cb-8da0-c1aa550c3298.png" alt="Our craftsman hand-engraving a silver pendant in the workshop" class="w-full h-auto">
+            </div>
+            <div class="instagram-feed">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/1cb30da7-c4eb-48ea-8872-e3e5fc75157e.png" alt="Styled flat lay of Aryora jewellery on marble surface" class="w-full h-auto">
+            </div>
+            <div class="instagram-feed">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/111cc555-7c76-448d-8342-f47a11512245.png" alt="Beautifully packaged Aryora gift box with silk ribbon" class="w-full h-auto">
+            </div>
+            <div class="instagram-feed">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/283f2d63-6c16-43f3-a099-505993f60e53.png" alt="Happy customer showing off her new Aryora earrings" class="w-full h-auto">
+            </div>
+        </div>
+        
+        <div class="text-center mt-12">
+            <a href="https://instagram.com/aryora.legacy" class="inline-block border-2 border-green-800 text-green-800 px-6 py-2 rounded-none font-medium hover:bg-green-800 hover:text-white transition duration-300">
+                <i class="fab fa-instagram mr-2"></i> FOLLOW US
+            </a>
+        </div>
+    </section>
+
+    <!-- Virtual Appointment Banner -->
+    <section class="py-12 bg-gradient-to-r from-green-800 to-green-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-2xl md:text-3xl font-bold mb-4">Personalized Virtual Styling</h2>
+            <p class="text-lg mb-8 max-w-3xl mx-auto">Book a complimentary virtual consultation with our jewellery experts to find pieces that complement your style.</p>
+            <a href="#" class="inline-block border-2 border-white text-white px-8 py-2 rounded-none font-medium hover:bg-white hover:text-green-800 transition duration-300">BOOK APPOINTMENT</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-12 pb-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <!-- About -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">ARYORA</h3>
+                    <p class="text-gray-400 mb-4">Crafting heirloom-quality silver jewellery that blends traditional craftsmanship with contemporary design.</p>
+                    <div class="flex space-x-4 mb-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://instagram.com/aryora.legacy" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-youtube"></i></a>
+                    </div>
+                    <p class="text-gray-400">
+                        <i class="fas fa-envelope mr-2"></i> aryora.legacy@gmail.com
+                    </p>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">SHOP</h3>
+                    <ul>
+                        <li class="mb-2"><a href="#" class="text-gray-400 hover:text-white">All Jewellery</a></li>
+                        <li class="mb-2"><a href="#" class="text-gray-400 hover:text-white">Necklaces</a></li>
+                        <li class="mb-2"><a href="#" class="text-gray-400 hover:text-white">Earrings</a></li>
+                        <li class="mb-2"><a href="#" class="text-gray-400 hover:text-white">Bracelets</a></li>
+                        <li class="mb-2"><a href="#" class="text-gray-400 hover:text-white">Rings</a></li>
+                        <li class="mb-2"><a href="#" class="text-gray-400 hover:text-white">New Arrivals</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Customer Care -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">CUSTOMER CARE</h3>
+                    <ul>
+                        <li class="mb-2"><a href="#" class="text-gray-400 hover:text-white">Contact Us</a></li>
+                        <li class="mb-2"><a href="#" class="text-gray-400 hover:text-white">FAQs</a></li>
+                        <li class="mb-2"><a href="#" class="text-gray-400 hover:text-white">Shipping & Returns</a></li>
+                        <li class="mb-2"><a href="#" class="text-gray-400 hover:text-white">Size Guide</a></li>
+                        <li class="mb-2"><a href="#" class="text-gray-400 hover:text-white">Track Order</a></li>
+                        <li class="mb-2"><a href="#" class="text-gray-400 hover:text-white">Care Guide</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Newsletter -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">STAY CONNECTED</h3>
+                    <p class="text-gray-400 mb-4">Subscribe to receive updates, access to exclusive deals, and more.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email address" class="bg-gray-800 text-white px-4 py-2 w-full focus:outline-none">
+                        <button type="submit" class="bg-green-700 text-white px-4 py-2 hover:bg-green-600 transition duration-300">→</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm mb-4 md:mb-0">© 2023 Aryora Silver Jewellery. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Returns Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/918808828646" class="whatsapp-btn">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Mobile Menu (hidden by default) -->
+    <div class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden" id="mobileMenu">
+        <div class="absolute top-0 right-0 w-64 h-full bg-white p-6">
+            <button class="absolute top-4 right-4 text-gray-600">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="space-y-6 mt-12">
+                <a href="#" class="block text-gray-900 border-b pb-2">Home</a>
+                <a href="#" class="block text-gray-900 border-b pb-2">Shop All</a>
+                <a href="#" class="block text-gray-900 border-b pb-2">Collections</a>
+                <a href="#" class="block text-gray-900 border-b pb-2">Try At Home</a>
+                <a href="#" class="block text-gray-900 border-b pb-2">Size Guide</a>
+                <a href="#" class="block text-gray-900 border-b pb-2">About Us</a>
+                <a href="#" class="block text-gray-900 border-b pb-2">Contact</a>
+                <a href="#" class="block text-gray-900">Career</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.fa-bars').closest('button').addEventListener('click', function() {
+            document.getElementById('mobileMenu').classList.remove('hidden');
+        });
+        
+        document.querySelector('#mobileMenu .fa-times').closest('button').addEventListener('click', function() {
+            document.getElementById('mobileMenu').classList.add('hidden');
+        });
+        
+        // Product filtering functionality would be implemented here
+        // Shopping cart functionality
+        // Search functionality
+        // Virtual appointment booking modal
+        // WhatsApp chat integration
+        
+        // Demo functionality for product page (would be separated in a real implementation)
+        function showProductDetails() {
+            // This would show a product detail modal or navigate to product page
+            console.log("Showing product details");
+        }
+    </script>
+</body>
+</html>
+
